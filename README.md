@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# User Day Timeline Visualization
 
-## Getting Started
+![image](https://github.com/mariamkilany/user_timeline/assets/70236043/578cdca6-98b7-42db-8856-a753c6ccf29b)
 
-First, run the development server:
+[Live Demo](https://user-timeline-avag.vercel.app/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Description
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This project is a web application that visually represents a user's day timeline on an interactive map. It retrieves data from the Supabase database, specifically the Places table, which contains information about events such as start and end timestamps, and latitude-longitude coordinates. The application then displays these events on a map using Google Maps API, allowing users to interactively explore their daily timeline.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Displays user events on an interactive map.
+- Supports switching between different days within a specified date range.
+- Provides detailed event information upon hovering over map markers.
+- Bonus feature: Utilizes Foursquare's Nearby Places API to fetch and display place names and categories for each event marker.
 
-## Learn More
+## Technologies Used
 
-To learn more about Next.js, take a look at the following resources:
+- Next.js
+- React
+- Supabase (for database connection)
+- Google Maps API
+- Foursquare's Nearby Places API
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Credits
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+The project was developed by [Mariam Kilany].
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
