@@ -10,11 +10,10 @@ import { extractLatLng } from "@/utils/functions/functions";
 import { AppContext } from "@/providers/AppProvider";
 import { EventData } from "@/types";
 import MapMarker from "./MapMarker";
-import { darkModeStyles } from "./styles";
+import { darkModeStyles, lightModeStyles } from "./styles";
 
-export default function Map() {
-  const { dayEvents, setSelectedEvent, hoveredEvent, setHoveredEvent } =
-    useContext(AppContext);
+export function Map() {
+  const { dayEvents, themeToggle } = useContext(AppContext);
   const libraries = useMemo(() => ["places"], []);
 
   const [map, setMap] = useState<google.maps.Map | null>(null);
@@ -58,7 +57,9 @@ export default function Map() {
       mapTypeId={google.maps.MapTypeId.TERRAIN}
       mapContainerStyle={{ width: "100%", height: "100%" }}
       onLoad={handleLoad}
-      options={{ styles: darkModeStyles }}
+      options={{
+        styles: themeToggle === "dark" ? darkModeStyles : lightModeStyles,
+      }}
     >
       {dayEvents?.map((event: EventData) => {
         return <MapMarker event={event} key={event.id} />;

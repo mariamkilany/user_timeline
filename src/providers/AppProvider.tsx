@@ -19,6 +19,7 @@ export default function AppProvider({ children }: { children: ReactNode }) {
   const [hoveredEvent, setHoveredEvent] = useState<EventData | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
+  const [themeToggle, setThemeToggle] = useState("dark");
 
   useEffect(() => {
     const fetchDayEvents = async () => {
@@ -40,6 +41,8 @@ export default function AppProvider({ children }: { children: ReactNode }) {
     selectedEvent,
     hoveredEvent,
     setHoveredEvent,
+    themeToggle,
+    setThemeToggle,
     mobileOpen,
     setMobileOpen,
     isClosing,

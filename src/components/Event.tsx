@@ -1,9 +1,9 @@
 import { Box, Stack } from "@mui/material";
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { AppContext } from "@/providers/AppProvider";
 import { formatAMPM, durationFormat } from "@/utils/functions/functions";
 
-const Event = () => {
+export const Event = () => {
   const { selectedEvent } = useContext(AppContext);
 
   return (
