@@ -77,6 +77,7 @@ export default function Sidebar() {
         sx={{
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           ml: { sm: `${drawerWidth}px` },
+          backgroundColor: orange[500],
         }}
       >
         <Toolbar>
@@ -95,6 +96,7 @@ export default function Sidebar() {
               sx={{
                 width: { sm: `calc(100% - ${drawerWidth}px)` },
                 ml: { sm: `${drawerWidth}px` },
+                backgroundColor: orange[500],
               }}
             >
               <Toolbar>
