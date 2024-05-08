@@ -1,5 +1,7 @@
 # User Day Timeline Visualization
 
+![image](https://github.com/mariamkilany/user_timeline/assets/70236043/578cdca6-98b7-42db-8856-a753c6ccf29b)
+
 [Live Demo](https://user-timeline-avag.vercel.app/)
 
 ## Description
