@@ -60,7 +60,6 @@ const GET = async (req: Request, context: any) => {
         };
     })
   );
-  console.log(withFoursquare);
   return Response.json(withFoursquare);
 };
 

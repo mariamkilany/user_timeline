@@ -6,11 +6,7 @@ import {
   Marker,
   InfoWindow,
 } from "@react-google-maps/api";
-import {
-  formatAMPM,
-  durationFormat,
-  extractLatLng,
-} from "@/utils/functions/functions";
+import { extractLatLng } from "@/utils/functions/functions";
 import { AppContext } from "@/providers/AppProvider";
 import { EventData } from "@/types";
 import MapMarker from "./MapMarker";
@@ -65,7 +61,7 @@ export default function Map() {
       options={{ styles: darkModeStyles }}
     >
       {dayEvents?.map((event: EventData) => {
-        return <MapMarker event={event} />;
+        return <MapMarker event={event} key={event.id} />;
       })}
     </GoogleMap>
   );
